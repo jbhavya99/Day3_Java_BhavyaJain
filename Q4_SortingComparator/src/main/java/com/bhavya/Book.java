@@ -1,0 +1,29 @@
+package com.bhavya;
+
+class Book implements Comparable<Book> {
+    private String title;
+    private String author;
+    private int year;
+
+    //constructor to assign values
+    public Book(String title, String author, int year) {
+        this.title = title;
+        this.author = author;
+        this.year = year;
+    }
+
+    public String getTitle() { return title; }
+    public String getAuthor() { return author; }
+    public int getYear() { return year; }
+
+    @Override
+    public int compareTo(Book other) {
+        return this.title.compareTo(other.title); // Natural ordering by title
+    }
+
+    @Override
+    public String toString() {
+        return "Book [title=" + title + ", author=" + author + ", year=" + year + "]";
+    }
+}
+
